@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import frame from '@/assets/images/frame_2691_1x.webp';
+import simCard from '@/assets/icons/sim-card.svg';
+import simple from '@/assets/icons/simple.svg';
+import favApp from '@/assets/icons/fav-app.svg';
+import eSIM from '@/assets/icons/eSIM.svg';
+import Chevron from '@/components/icons/Chevron';
+---
+<section id="service" class="shadow-ioh-card rounded-2xl bg-[#fff]">
+	<div class="flex justify-between shadow-ioh-card rounded-2xl bg-[#fff] relative z-10">
+		<Image src={frame} alt="Tetap terkoneksi dengan eSIM" class="mx-10" />
+		<div class="p-8 flex flex-col gap-8">
+			<h2 class="text-4xl font-bold">
+				Tetap terkoneksi dengan <span class="text-ioh-red-600">eSIM</span>
+			</h2>
+			<p class="text-ioh-neutral-800">
+				eSIM adalah teknologi baru yang memungkinkan Kamu untuk mengakses jaringan Indosat Ooredoo Hutchison ke perangkat / handphone tanpa menggunakan kartu SIM fisik.
+			</p>
+			<div class="grid grid-cols-6 gap-4">
+				<div class="flex flex-col gap-2.5">
+					<Image src={simCard} alt="Sim card" />
+					<p class="text-xs font-light">New Tech</p>
+				</div>
+				<div class="flex flex-col gap-2.5">
+					<Image src={simple} alt="Simple" />
+					<p class="text-xs font-light">Easy & Simple</p>
+				</div>
+				<div class="flex flex-col gap-2.5">
+					<Image src={favApp} alt="Favourite app" />
+					<p class="text-xs font-light">Best service</p>
+				</div>
+			</div>
+			<a
+				href="/esim" 
+				class="bg-ioh-red-600 text-sm font-semibold rounded-full w-60 h-10 leading-10 flex px-6 gap-4"
+			>
+				<span class="text-[#fff]">
+					Pesan eSIM sekarang
+				</span>
+				<Chevron className="w-8 stroke-[#fff]" />
+			</a>
+		</div>
+	</div>
+	<div class="shadow-ioh-card rounded-b-2xl gap-8 bg-[#fff] flex items-center p-8">
+		<p class="flex-shrink-0">Layanan eSIM Lainnya</p>
+		<div class="w-full grid grid-cols-3 gap-8">
+			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+					<Image src={eSIM} alt="ESIM" />
+				</div>
+				<span class="text-xs font-semibold">
+					Upgrade ke eSIM
+				</span>
+				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
+					<Chevron className="w-3 text-ioh-red-600" />
+				</div>
+			</a>
+			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+					<Image src={eSIM} alt="ESIM" />
+				</div>
+				<span class="text-xs font-semibold">
+					Ubah eSIM ke eSIM
+				</span>
+				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
+					<Chevron className="w-3 text-ioh-red-600" />
+				</div>
+			</a>
+			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+					<Image src={eSIM} alt="ESIM" />
+				</div>
+				<span class="text-xs font-semibold">
+					Transfer eSIM
+				</span>
+				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
+					<Chevron className="w-3 text-ioh-red-600" />
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
