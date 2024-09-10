@@ -7,7 +7,7 @@ import favApp from '@/assets/icons/fav-app.svg';
 import eSIM from '@/assets/icons/eSIM.svg';
 import Chevron from '@/components/icons/Chevron';
 ---
-<section id="service" class="shadow-ioh-card rounded-2xl bg-[#fff]">
+<section id="service" class="rounded-2xl bg-[#fff]">
 	<div class="flex justify-between shadow-ioh-card rounded-2xl bg-[#fff] relative z-10">
 		<Image src={frame} alt="Tetap terkoneksi dengan eSIM" class="mx-10" />
 		<div class="p-8 flex flex-col gap-8">
@@ -33,49 +33,55 @@ import Chevron from '@/components/icons/Chevron';
 			</div>
 			<a
 				href="/esim" 
-				class="bg-ioh-red-600 text-sm font-semibold rounded-full w-60 h-10 leading-10 flex px-6 gap-4"
+				class="bg-ioh-red-600 text-sm font-semibold rounded-full w-fit h-10 leading-10 flex px-6"
 			>
 				<span class="text-[#fff]">
 					Pesan eSIM sekarang
 				</span>
-				<Chevron className="w-8 stroke-[#fff]" />
+				<Chevron className="w-3 ml-6 stroke-[#fff]" />
 			</a>
 		</div>
 	</div>
 	<div class="shadow-ioh-card rounded-b-2xl gap-8 bg-[#fff] flex items-center p-8">
 		<p class="flex-shrink-0">Layanan eSIM Lainnya</p>
 		<div class="w-full grid grid-cols-3 gap-8">
-			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
-				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
-					<Image src={eSIM} alt="ESIM" />
+			<a class="flex items-center justify-between gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="flex items-center gap-4">
+					<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+						<Image src={eSIM} alt="ESIM" />
+					</div>
+					<span class="text-xs font-semibold">
+						Upgrade ke eSIM
+					</span>
 				</div>
-				<span class="text-xs font-semibold">
-					Upgrade ke eSIM
-				</span>
 				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
-					<Chevron className="w-3 text-ioh-red-600" />
+					<Chevron className="w-1 text-ioh-red-600" />
 				</div>
 			</a>
-			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
-				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
-					<Image src={eSIM} alt="ESIM" />
+			<a class="flex items-center justify-between gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="flex items-center gap-4">
+					<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+						<Image src={eSIM} alt="ESIM" />
+					</div>
+					<span class="text-xs font-semibold">
+						Ubah eSIM ke eSIM
+					</span>
 				</div>
-				<span class="text-xs font-semibold">
-					Ubah eSIM ke eSIM
-				</span>
 				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
-					<Chevron className="w-3 text-ioh-red-600" />
+					<Chevron className="w-1 text-ioh-red-600" />
 				</div>
 			</a>
-			<a class="flex items-center gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
-				<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
-					<Image src={eSIM} alt="ESIM" />
+			<a class="flex items-center justify-between gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">
+				<div class="flex items-center gap-4">
+					<div class="w-9 h-9 flex justify-center items-center rounded-full bg-ioh-neutral-200">
+						<Image src={eSIM} alt="ESIM" />
+					</div>
+					<span class="text-xs font-semibold">
+						Transfer eSIM
+					</span>
 				</div>
-				<span class="text-xs font-semibold">
-					Transfer eSIM
-				</span>
 				<div class="w-4 h-4 flex justify-center items-center rounded-full bg-ioh-neutral-100">
-					<Chevron className="w-3 text-ioh-red-600" />
+					<Chevron className="w-1 text-ioh-red-600" />
 				</div>
 			</a>
 		</div>

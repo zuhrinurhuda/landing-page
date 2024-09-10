@@ -3,7 +3,7 @@ const Chevron = (props: React.SVGProps<SVGSVGElement>) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 24 24"
+      viewBox="0 0 12 20"
       stroke="currentColor"
       {...props}
     >
@@ -11,7 +11,7 @@ const Chevron = (props: React.SVGProps<SVGSVGElement>) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M9 5l7 7-7 7"
+        d="M1.74426 18.4706L10.2149 9.99999L1.74426 1.52941"
       />
     </svg>
   );
