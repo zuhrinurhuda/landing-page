@@ -6,8 +6,6 @@ import clsx from "clsx";
  * @param classes - A list of class names or conditions
  * @returns A single string with resolved class names
  */
-export const mergeClassNames = (
-  ...classes: (string | undefined | false | null)[]
-) => {
+export const cn = (...classes: (string | undefined | false | null)[]) => {
   return twMerge(clsx(...classes));
 };
