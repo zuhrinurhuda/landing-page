@@ -13,24 +13,28 @@ const Accordion = ({ content }: AccordionProps) => {
   };
 
   return (
-    <ul className="w-full flex flex-col items-center gap-4">
-      {content
-        .slice(0, isExpanded ? content.length : 4)
-        .map(({ title, description }, index) => (
-          <li key={title} className="border-b border-ioh-neutral-300 w-full">
-            <button
-              onClick={() => handleOnClick(index)}
-              className="w-full h-full py-4"
-            >
-              <dl className="flex flex-col text-left gap-4">
-                <dt>{title}</dt>
-                <dd className={cn("hidden", activeIndex === index && "block")}>
-                  {description}
-                </dd>
-              </dl>
-            </button>
-          </li>
-        ))}
+    <div className="w-full flex flex-col items-center gap-4">
+      <ul className="w-full">
+        {content
+          .slice(0, isExpanded ? content.length : 4)
+          .map(({ title, description }, index) => (
+            <li key={title} className="border-b border-ioh-neutral-300 w-full">
+              <button
+                onClick={() => handleOnClick(index)}
+                className="w-full h-full py-4"
+              >
+                <dl className="flex flex-col text-left gap-4">
+                  <dt>{title}</dt>
+                  <dd
+                    className={cn("hidden", activeIndex === index && "block")}
+                  >
+                    {description}
+                  </dd>
+                </dl>
+              </button>
+            </li>
+          ))}
+      </ul>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="text-ioh-red-600 font-bold flex items-center gap-2 px-6 py-3"
@@ -38,7 +42,7 @@ const Accordion = ({ content }: AccordionProps) => {
         <span>{isExpanded ? "Collapse" : "Read all"}</span>
         <Chevron className="w-3 h-3" />
       </button>
-    </ul>
+    </div>
   );
 };
 
