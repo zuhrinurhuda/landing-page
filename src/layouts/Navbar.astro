@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import logoIM3 from '@/assets/icons/logo-IM3.svg';
+import NavigationMenu from '@/components/ui/NavigationMenu';
+---
+<section class="bg-[#fff] sticky top-0 z-50">
+	<div class="container sm:max-w-[1140px] mx-auto flex justify-between items-center">
+		<nav class="px-4 py-3 flex items-center flex-row-reverse sm:flex-row sm:gap-20">
+			<a href="/" class="absolute left-36 sm:relative sm:left-0">
+				<Image src={logoIM3} alt="logo" />
+			</a>
+			<NavigationMenu client:load />
+		</nav>
+		<div class="flex gap-2 p-4">
+			<button class="font-bold text-ioh-neutral-500">ID</button>
+			<span class="w-0 border border-r border-ioh-neutral-500"/>
+			<button class="font-bold text-ioh-red-600">EN</button>
+		</div>
+	</div>
+</section>

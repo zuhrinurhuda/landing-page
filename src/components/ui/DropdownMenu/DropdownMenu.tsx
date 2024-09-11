@@ -1,62 +1,43 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+
+import flames from "@/assets/icons/flames.svg";
+import Chevron from "@/components/icons/Chevron";
+import { cn } from "@/utils/mergeClassNames";
 
 import type { DropdownMenuProps } from "./DropdownMenu.types";
 
-const DropdownMenu = ({ buttonLabel, options }: DropdownMenuProps) => {
+const DropdownMenu = ({
+  buttonLabel,
+  isPopular,
+  options,
+}: DropdownMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Handle clicking outside the dropdown to close it
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownRef]);
-
-  const handleOptionClick = () => {
-    setIsOpen(false); // Close the dropdown after selection
-  };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-gray-700 hover:text-blue-500 flex items-center px-4 py-2 rounded-md transition-colors h-16 leading-4"
+        className="flex items-center px-3 py-2 text-ioh-neutral-500 hover:text-ioh-red-600 font-bold"
       >
         {buttonLabel}
-        <svg
-          className={`w-4 h-4 ml-2 transition-transform ${isOpen ? "rotate-180" : ""}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        {isPopular && (
+          <img src={flames.src} alt="fire" className="size-4 ml-2" />
+        )}
+        <Chevron
+          className={cn(
+            "size-3 ml-2 rotate-90 transition-transform",
+            isOpen && "-rotate-90"
+          )}
+        />
       </button>
       {isOpen && (
-        <ul className="absolute z-10 mt-2 w-48 bg-[#fff] border border-gray-300 rounded-md shadow-lg flex flex-col">
+        <ul className="absolute z-50 mt-2 w-48 bg-[#fff] shadow-lg flex flex-col">
           {options.map(({ label, href }) => (
-            <li key={label} className="hover:bg-gray-100">
+            <li key={label} className="border-b border-ioh-neutral-300">
               <a
                 key={label}
                 href={href}
-                className="block px-4 py-2 text-gray-700 transition-colors h-16 leading-4"
+                className="block px-3 py-2 text-ioh-neutral-500 hover:text-ioh-red-600 font-bold"
               >
                 {label}
               </a>
