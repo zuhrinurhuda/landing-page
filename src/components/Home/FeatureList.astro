@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import location from '@/assets/icons/location.svg';
+import simCardOn from '@/assets/icons/sim-card-on.svg';
+---
+
+<section id="feature-list" class="flex flex-col gap-12 items-center p-4">
+	<h2 class="text-2xl sm:text-4xl font-bold">Sudah pesan Kartu SIM?</h2>
+	<div class="flex flex-col sm:grid sm:grid-cols-3 gap-6">
+		<div class="flex flex-col gap-8">
+			<Image src={location} alt="Location" class="size-10 sm:size-14"/>
+			<div class="flex flex-col gap-4">
+				<h3 class="text-xl font-bold">Track your order</h3>
+				<p class="text-ioh-neutral-800">Already ordered? find out your order status here</p>
+			</div>
+		</div>
+		<div class="flex flex-col gap-8">
+			<Image src={simCardOn} alt="Sim card ON" class="size-10 sm:size-14"/>
+			<div class="flex flex-col gap-4">
+				<h3 class="text-xl font-bold">Activate Postpaid</h3>
+				<p class="text-ioh-neutral-800">Complete your personal information to activate postpaid SIM Card</p>
+			</div>
+		</div>
+		<div class="flex flex-col gap-8">
+			<Image src={simCardOn} alt="Sim card ON" class="size-10 sm:size-14"/>
+			<div class="flex flex-col gap-4">
+				<h3 class="text-xl font-bold">Register Prepaid</h3>
+				<p class="text-ioh-neutral-800">Don’t forget to register your prepaid SIM Card here</p>
+			</div>
+		</div>
+	</div>
+</section>

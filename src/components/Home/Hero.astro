@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import jumbotron from '@/assets/images/jumbotron_1x.webp';
+import mobileBanner from '@/assets/images/mobile_banner_nomor_cantik_en_2x.webp'
+import like from '@/assets/icons/like.svg';
+import note from '@/assets/icons/note.svg';
+import calendar from '@/assets/icons/calendar.svg';
+import convert from '@/assets/icons/convert.svg';
+---
+<section id="hero" class="flex flex-col sm:gap-10">
+	<a href="/order">
+		<Image src={jumbotron} alt="Dapatkan nomor cantik 11 digit" class="hidden sm:block" />
+		<Image src={mobileBanner} alt="Dapatkan nomor cantik 11 digit" class="block sm:hidden" />
+	</a>
+	<div id="quick-access" class="grid grid-cols-4 gap-4 p-4 sm:rounded-2xl sm:shadow-ioh-card bg-[#fff]">
+		<a href="/order" class="flex flex-col sm:flex-row text-center sm:text-left items-center gap-4">
+			<div class="bg-ioh-red-600 size-8 sm:size-16 rounded-full flex justify-center items-center">
+				<Image src={like} alt="Like icon" class="size-4 sm:size-8"/>
+			</div>
+			<p class="text-xs font-medium">Best Seller</p>
+		</a>
+		<a href="/order" class="flex flex-col sm:flex-row text-center sm:text-left items-center gap-4">
+			<div class="bg-ioh-red-600 size-8 sm:size-16 rounded-full flex justify-center items-center">
+				<Image src={note} alt="Note icon" class="size-4 sm:size-8"/>
+			</div>
+			<p class="text-xs font-medium">Berlangganan Postpaid</p>
+		</a>
+		<a href="/order" class="flex flex-col sm:flex-row text-center sm:text-left items-center gap-4">
+			<div class="bg-ioh-red-600 size-8 sm:size-16 rounded-full flex justify-center items-center">
+				<Image src={calendar} alt="Calendar icon" class="size-4 sm:size-8"/>
+			</div>
+			<p class="text-xs font-medium">Perpanjang Kontrak</p>
+		</a>
+		<a href="/order" class="flex flex-col sm:flex-row text-center sm:text-left items-center gap-4">
+			<div class="bg-ioh-red-600 size-8 sm:size-16 rounded-full flex justify-center items-center">
+				<Image src={convert} alt="Convert icon" class="size-4 sm:size-8"/>
+			</div>
+			<p class="text-xs font-medium">Upgrade ke Postpaid</p>
+		</a>
+	</div>
+</section>
