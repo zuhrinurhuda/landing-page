@@ -109,14 +109,14 @@ const Tabs = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full gap-4">
       <div className="flex gap-4">
         {tabs.map(({ label }, index) => (
           <button
             key={label}
             onClick={() => setTabIndex(index)}
             className={cn(
-              "text-ioh-red-600 border border-ioh-red-600 bg-ioh-red-50 rounded-md px-6 py-3 transition ease-in-out duration-300 transform",
+              "text-sm font-semibold text-ioh-red-600 border border-ioh-red-600 bg-ioh-red-50 rounded-md px-6 py-3",
               tabIndex !== index
                 ? "text-ioh-neutral-800 bg-[#fff] border-none"
                 : ""

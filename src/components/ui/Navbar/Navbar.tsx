@@ -77,7 +77,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#fff] shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container sm:max-w-[1140px] mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/">
           <img src={logoIM3.src} alt="logo" />
         </a>

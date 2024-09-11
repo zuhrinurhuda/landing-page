@@ -7,9 +7,9 @@ import favApp from '@/assets/icons/fav-app.svg';
 import eSIM from '@/assets/icons/eSIM.svg';
 import Chevron from '@/components/icons/Chevron';
 ---
-<section id="service" class="rounded-2xl bg-[#fff]">
+<section id="service" class="rounded-2xl bg-[#fff] m-4 sm:m-0">
 	<div class="flex justify-between shadow-ioh-card rounded-2xl bg-[#fff] relative z-10">
-		<Image src={frame} alt="Tetap terkoneksi dengan eSIM" class="mx-10" />
+		<Image src={frame} alt="Tetap terkoneksi dengan eSIM" class="hidden sm:block sm:mx-10" />
 		<div class="p-8 flex flex-col gap-8">
 			<h2 class="text-4xl font-bold">
 				Tetap terkoneksi dengan <span class="text-ioh-red-600">eSIM</span>
@@ -17,7 +17,7 @@ import Chevron from '@/components/icons/Chevron';
 			<p class="text-ioh-neutral-800">
 				eSIM adalah teknologi baru yang memungkinkan Kamu untuk mengakses jaringan Indosat Ooredoo Hutchison ke perangkat / handphone tanpa menggunakan kartu SIM fisik.
 			</p>
-			<div class="grid grid-cols-6 gap-4">
+			<div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
 				<div class="flex flex-col gap-2.5">
 					<Image src={simCard} alt="Sim card" />
 					<p class="text-xs font-light">New Tech</p>
@@ -33,16 +33,30 @@ import Chevron from '@/components/icons/Chevron';
 			</div>
 			<a
 				href="/esim" 
-				class="bg-ioh-red-600 text-sm font-semibold rounded-full w-fit h-10 leading-10 flex px-6"
+				class="hidden sm:flex bg-ioh-red-600 text-sm font-semibold rounded-full w-fit h-10 leading-10 px-6"
 			>
 				<span class="text-[#fff]">
 					Pesan eSIM sekarang
 				</span>
 				<Chevron className="w-3 ml-6 stroke-[#fff]" />
 			</a>
+			<div class="grid grid-cols-2 sm:hidden gap-4">
+				<button class="h-9 text-sm font-semibold bg-ioh-red-50 border border-ioh-red-600 text-ioh-red-600 rounded-lg">
+					Buy eSIM
+				</button>
+				<button class="h-9 text-sm font-semibold bg-ioh-red-50 rounded-lg">
+					Upgrade to eSIM
+				</button>
+				<button class="h-9 text-sm font-semibold bg-ioh-red-50 rounded-lg">
+					eSIM to eSIM
+				</button>
+				<button class="h-9 text-sm font-semibold bg-ioh-red-50 rounded-lg">
+					Transfer eSIM
+				</button>
+			</div>
 		</div>
 	</div>
-	<div class="shadow-ioh-card rounded-b-2xl gap-8 bg-[#fff] flex items-center p-8">
+	<div class="hidden sm:flex items-center p-8 shadow-ioh-card rounded-b-2xl gap-8 bg-[#fff]">
 		<p class="flex-shrink-0">Layanan eSIM Lainnya</p>
 		<div class="w-full grid grid-cols-3 gap-8">
 			<a class="flex items-center justify-between gap-4 p-3 border border-ioh-neutral-300 rounded-2xl">

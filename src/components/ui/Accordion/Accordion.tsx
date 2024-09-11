@@ -17,17 +17,18 @@ const Accordion = ({ content }: AccordionProps) => {
       {content
         .slice(0, isExpanded ? content.length : 4)
         .map(({ title, description }, index) => (
-          <li
-            key={index}
-            className="border-b border-ioh-neutral-300 py-4 w-full"
-            onClick={() => handleOnClick(index)}
-          >
-            <dl className="flex flex-col gap-4">
-              <dt>{title}</dt>
-              <dd className={cn("hidden", activeIndex === index && "block")}>
-                {description}
-              </dd>
-            </dl>
+          <li key={title} className="border-b border-ioh-neutral-300 w-full">
+            <button
+              onClick={() => handleOnClick(index)}
+              className="w-full h-full py-4"
+            >
+              <dl className="flex flex-col text-left gap-4">
+                <dt>{title}</dt>
+                <dd className={cn("hidden", activeIndex === index && "block")}>
+                  {description}
+                </dd>
+              </dl>
+            </button>
           </li>
         ))}
       <button

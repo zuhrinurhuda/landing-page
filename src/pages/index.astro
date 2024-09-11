@@ -1,16 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import jumbotron from '@/assets/images/jumbotron_1x.webp';
-import QuickAccess from '@/components/Home/QuickAccess.astro';
+import Hero from '@/components/Home/Hero.astro';
 import Service from '@/components/Home/Service.astro';
 import FeatureList from '@/components/Home/FeatureList.astro';
 import Faq from '@/components/Home/Faq.astro';
 ---
 
 <Layout title="Beli Nomor Cantik di IM3 Shop Banyak Untungnya">
-	<Image src={jumbotron} alt="Dapatkan nomor cantik 11 digit" />
-	<QuickAccess />
+	<Hero />
 	<Service />
 	<FeatureList />
 	<Faq />
