@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import tiktok from '@/assets/icons/tiktok.svg';
+import twitter from '@/assets/icons/twitter.svg';
+import facebook from '@/assets/icons/facebook.svg';
+import linkedin from '@/assets/icons/linkedin.svg';
+import youtube from '@/assets/icons/youtube.svg';
+import instagram from '@/assets/icons/instagram.svg';
+---
+<footer class="bg-ioh-neutral-250 p-4 sm:py-4 mt-6 sm:mt-16">
+	<div class="container sm:max-w-[1140px] mx-auto flex flex-col-reverse gap-2 sm:flex-row justify-between items-center">
+		<p class="text-xs sm:text-md text-ioh-neutral-400 font-extralight">Indosat Ooredoo Hutchison © 2023 All Right Reserved</p>
+		<div class="flex items-center gap-6">
+			<p class="hidden sm:block font-extralight">Follow us</p>
+			<a
+				href="https://facebook.com/IndosatOoredooHutchison" 
+				class="h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#3F86E3" }}
+			>
+				<Image src={facebook} alt="Facebook icon" />
+			</a>
+			<a
+				href="https://instagram.com/IndosatOoredooHutchison" 
+				class="h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#3B3B3B" }}
+			>
+				<Image src={instagram} alt="Instagram icon" />
+			</a>
+			<a
+				href="https://twitter.com/IndosatOoredooHutchison" 
+				class="h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#6DC4EB" }}
+			>
+				<Image src={twitter} alt="Twitter icon" />
+			</a>
+			<a
+				href="https://youtube.com/IndosatOoredooHutchison" 
+				class="h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#E03E3E" }}
+			>
+				<Image src={youtube} alt="Youtube icon" />
+			</a>
+			<a
+				href="https://linkedin.com/IndosatOoredooHutchison" 
+				class="h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#0570AE" }}
+			>
+				<Image src={linkedin} alt="Linkedin icon" />
+			</a>
+			<a
+				href="https://tiktok.com/IndosatOoredooHutchison" 
+				class="hidden sm:block h-8 w-8 rounded-full flex justify-center items-center"
+				style={{ backgroundColor: "#E8E8E8" }}
+			>
+				<Image src={tiktok} alt="Tiktok icon" />
+			</a>
+		</div>
+	</div>
+</footer>
