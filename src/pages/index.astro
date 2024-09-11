@@ -5,13 +5,13 @@ import jumbotron from '@/assets/images/jumbotron_1x.webp';
 import QuickAccess from '@/components/Home/QuickAccess.astro';
 import Service from '@/components/Home/Service.astro';
 import FeatureList from '@/components/Home/FeatureList.astro';
+import Faq from '@/components/Home/Faq.astro';
 ---
 
 <Layout title="Beli Nomor Cantik di IM3 Shop Banyak Untungnya">
-	<main class="container mx-auto flex flex-col gap-16">
-		<Image src={jumbotron} alt="Dapatkan nomor cantik 11 digit" />
-		<QuickAccess />
-		<Service />
-		<FeatureList />
-	</main>
+	<Image src={jumbotron} alt="Dapatkan nomor cantik 11 digit" />
+	<QuickAccess />
+	<Service />
+	<FeatureList />
+	<Faq />
 </Layout>
